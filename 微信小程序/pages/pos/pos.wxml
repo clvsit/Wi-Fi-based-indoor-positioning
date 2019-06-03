@@ -1,0 +1,11 @@
+<map
+  id="map"
+  longitude="{{longitude}}"
+  latitude='{{latitude}}'
+  scale='18'
+  show-location
+  markers='{{markers}}'
+  subkey="DTGBZ-UCVLP-CMZDR-VRB3F-5ZLH2-MTFTN"
+  style="height: {{height}}px;">
+</map>
+<view class="button-position"></view>

@@ -1,0 +1,17 @@
+<view class="main-body" style="height:{{height}}px">
+  <image class="pos-img" src="{{picture}}" model="aspectFit" ></image>
+  <view class="point-list">
+    <view class="point" wx:key="{{points}}" wx:for="{{points}}" style="top: {{item.top}};left: {{item.left}}">{{item.apid}}</view>
+  </view>
+  <image class="mark" src='/assets/icons/icon_point.png' style="top: {{point.top}};left: {{point.left}}"></image>
+</view>
+<view class="function-tab">
+  <view class="tab-item">
+    <image src="/assets/icons/icon_predict.png"></image>
+    <text>获取位置</text>
+  </view>
+  <view class="tab-item" wx-if='{{isManager}}'>
+    <image src="/assets/icons/icon_manage.png"></image>
+    <navigator url='/pages/manage/manage?lid={{lid}}'>数据管理</navigator>
+  </view>
+</view>

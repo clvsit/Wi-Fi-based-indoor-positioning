@@ -1,0 +1,16 @@
+map {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.button-position {
+  position: absolute;
+  right: 5%;
+  bottom: 8%;
+  width: 80rpx;
+  height: 80rpx;
+  background-color: #fff;
+  border-radius: 40rpx;
+  box-shadow: 0 0 5px 3px #000;
+}

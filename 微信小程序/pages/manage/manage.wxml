@@ -1,0 +1,38 @@
+<view class="main-body">
+  <view class="main-map">
+    <image class="pos-img" src="/assets/images/bedroom.jpg" model="aspectFit"></image>
+    <view class="point-list">
+      <view class="point" wx:key="{{points}}" wx:for="{{points}}" style="top: {{item.top}};left: {{item.left}}">{{index + 1}}</view>
+    </view>
+  </view>
+  <scroll-view class="main-list">
+    <view class="main-item" wx:key="{{points}}" wx:for="{{points}}" bindtap='getPoint'>
+      <image src="/assets/icons/icon_pos.png" data-point="{{index + 1}}"></image>
+      <view data-point="{{index + 1}}">坐标 {{index + 1}}</view>
+    </view>
+  </scroll-view>
+</view>
+
+<view class="info-body" style="height: {{height}}px">
+  <view class="info-row">
+    <text>坐标：{{message.point}}</text>
+    <text style="float: right; color: #f00;">提示：请站在坐标所示位置处采集数据</text>
+  </view>
+  <view class="info-row">训练：{{message.train}}</view>
+  <view class="info-row">预测：{{message.predict}}</view>
+</view>
+
+<view class="function-tab"> 
+  <view class="tab-item" bindtap="sample">
+    <image src="/assets/icons/icon_sample.png"></image>
+    <text>采集</text>
+  </view>
+  <view class="tab-item function-sample" bindtap="train">
+    <image src="/assets/icons/icon_train.png"></image>
+    <text>训练</text>
+  </view>
+  <view class="tab-item function-sample" bindtap="predict">
+    <image src="/assets/icons/icon_predict.png"></image>
+    <text>预测</text>
+  </view>
+</view>
